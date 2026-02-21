@@ -52,7 +52,8 @@ docs/
 ├── claude-code-research.md                  # Research: Claude Code's 68K-star rise
 ├── cybersecurity-stocks-claude-security.md  # Research: Market impact of AI security tools
 ├── claude-max-tos-grey-area.md              # Research: Claude Max TOS enforcement patterns
-└── claude-code-compute-economics.md         # Research: Claude Code's $6/day compute economics
+├── claude-code-compute-economics.md         # Research: Claude Code's $6/day compute economics
+└── agentic-ai-taxonomy.md                   # Research: Three paradigms of agentic AI
 ```
 
 ## Design

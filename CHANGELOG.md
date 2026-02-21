@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.3.1] - 2026-02-21
+
+### Added
+- Agentic AI taxonomy research — three paradigms (traditional LLMs → reasoning models → agentic systems) and three delivery vessels (enhanced chatbots, browser extensions, autonomous agents), with relevance scoring to Token Prophet's pedagogical mission (`docs/agentic-ai-taxonomy.md`)
+
 ## [0.3.0] - 2026-02-21
 
 ### Added
