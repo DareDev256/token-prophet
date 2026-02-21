@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.2.3] - 2026-02-21
+
+### Added
+- Claude Max TOS grey area research — selective enforcement patterns, what it means for AI tooling, and why Token Prophet's zero-API architecture sidesteps it entirely (`docs/claude-max-tos-grey-area.md`)
+
 ## [0.2.2] - 2026-02-21
 
 ### Added
