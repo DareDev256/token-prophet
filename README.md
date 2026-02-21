@@ -48,7 +48,8 @@ src/
 ├── lib/           # Utilities (storage, helpers)
 └── types/         # TypeScript type definitions
 docs/
-└── mcp-research.md  # Research: MCP and the AI agent era
+├── mcp-research.md         # Research: MCP and the AI agent era
+└── claude-code-research.md # Research: Claude Code's 68K-star rise
 ```
 
 ## Design

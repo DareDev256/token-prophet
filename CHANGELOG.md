@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.2.1] - 2026-02-21
+
+### Added
+- Claude Code research document — deep dive on the 68K-star agentic coding tool, multi-agent orchestration, and its connection to token prediction (`docs/claude-code-research.md`)
+
 ## [0.2.0] - 2026-02-21
 
 ### Added
