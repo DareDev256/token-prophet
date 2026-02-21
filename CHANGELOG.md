@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.3.2] - 2026-02-21
+
+### Added
+- AnythingLLM RAG democratization research — how the 54K-star open-source RAG app validates Token Prophet's probability-shifting pedagogy, with analysis of workspace containerization as prediction boundaries and embedding as oracle translation (`docs/anythingllm-rag-democratization.md`)
+
 ## [0.3.1] - 2026-02-21
 
 ### Added
