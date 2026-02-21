@@ -54,7 +54,9 @@ docs/
 ├── claude-max-tos-grey-area.md              # Research: Claude Max TOS enforcement patterns
 ├── claude-code-compute-economics.md         # Research: Claude Code's $6/day compute economics
 ├── agentic-ai-taxonomy.md                   # Research: Three paradigms of agentic AI
-└── anythingllm-rag-democratization.md       # Research: AnythingLLM and RAG probability shifting
+├── anythingllm-rag-democratization.md       # Research: AnythingLLM and RAG probability shifting
+├── new-glossary.md                          # Research: The New Glossary — LLMs, RAG, Agents, MCP
+└── modern-toolbelt.md                       # Research: The Modern Toolbelt — Claude, Gemini, Lovable, Replit, Bolt, Cursor
 ```
 
 ## Design

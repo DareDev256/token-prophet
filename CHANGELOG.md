@@ -2,6 +2,12 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.3.3] - 2026-02-21
+
+### Added
+- The New Glossary research — defines the four pillars (LLMs, RAG, Agents, MCP) with ASCII architecture diagram showing how prediction stacks into action (`docs/new-glossary.md`)
+- The Modern Toolbelt research — maps the builder spectrum from foundation models (Claude, Gemini) to AI platforms (Cursor, Lovable, Replit, Bolt) with control-vs-speed positioning (`docs/modern-toolbelt.md`)
+
 ## [0.3.2] - 2026-02-21
 
 ### Added
