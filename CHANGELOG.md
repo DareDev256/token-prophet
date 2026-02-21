@@ -2,6 +2,21 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.4.0] - 2026-02-21
+
+### Added
+- **Cosmic Alignment** — interactive SVG constellation map visualizing the hidden relationships between probability orbs and celestial events
+- 8 clickable stars representing Orrery probability models, positioned in a hand-crafted constellation layout
+- Connection lines between stars that share celestial event influences (bipartite graph visualization)
+- Click any star to reveal its weight, affecting events, and connected neighbors — unselected stars dim with smooth transitions
+- Pulsating glow ring animation on selected stars with gold radiance
+- Stars shimmer independently with staggered SVG animate cycles keyed to their index
+- Influence panel shows each affecting event's glyph, name, and modifier with color-coded boost (gold) vs suppress (purple)
+- Lines brighten to gold when their star is selected, dim to subtle purple otherwise
+- Spring-based entrance animations via Framer Motion
+- Full keyboard accessibility and WCAG 2.2 focus indicators
+- Navigation: ghost button on landing page, back button on cosmic page
+
 ## [0.3.4] - 2026-02-21
 
 ### Added

@@ -63,6 +63,10 @@ docs/
 
 Oracle/mystical aesthetic — deep purple (`#9b59b6`) and gold (`#f1c40f`) on black (`#0d0015`). Crystal ball motifs, constellation patterns, probability as divination.
 
+### Cosmic Alignment
+
+The `/cosmic` page renders an interactive SVG constellation map. Each star represents one of the Orrery's 8 probability orbs — tap a star to see which celestial events influence it. Connection lines between stars reveal shared event bonds. Selected stars pulse with a gold glow ring, connected neighbors stay visible, and everything else dims. It's the relationship graph behind the Celestial Alignment toggles, presented as a living star chart.
+
 ### Celestial Alignment
 
 The `/alignment` page lets you toggle hypothetical "celestial events" — like a star rising or a market void — and watch the Orrery's probability orbs react in real-time. Each event applies a weight modifier to specific orbs, causing them to grow, glow brighter, shift color, or fade. It's a hands-on demonstration of how external factors shift probability distributions, presented through mystical constellation glyphs.
