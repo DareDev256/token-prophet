@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.2.2] - 2026-02-21
+
+### Added
+- Cybersecurity market impact research — how Claude Code Security's launch triggered a sector-wide sell-off and what it means for token prediction (`docs/cybersecurity-stocks-claude-security.md`)
+
 ## [0.2.1] - 2026-02-21
 
 ### Added

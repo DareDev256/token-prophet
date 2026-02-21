@@ -48,8 +48,9 @@ src/
 ├── lib/           # Utilities (storage, helpers)
 └── types/         # TypeScript type definitions
 docs/
-├── mcp-research.md         # Research: MCP and the AI agent era
-└── claude-code-research.md # Research: Claude Code's 68K-star rise
+├── mcp-research.md                          # Research: MCP and the AI agent era
+├── claude-code-research.md                  # Research: Claude Code's 68K-star rise
+└── cybersecurity-stocks-claude-security.md  # Research: Market impact of AI security tools
 ```
 
 ## Design
