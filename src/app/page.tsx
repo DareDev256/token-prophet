@@ -54,6 +54,9 @@ export default function Home() {
         <Button href="/categories" variant="secondary">
           CATEGORIES
         </Button>
+        <Button href="/alignment" variant="ghost">
+          ✦ CELESTIAL ALIGNMENT
+        </Button>
       </motion.div>
 
       <motion.p

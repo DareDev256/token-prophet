@@ -2,6 +2,19 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.3.0] - 2026-02-21
+
+### Added
+- **Celestial Alignment** — interactive probability manipulation through hypothetical "celestial events"
+- 5 toggleable events (Code Star Rising, Security Eclipse, Agent Conjunction, Market Void, Token Flare) that shift Orrery orb weights in real-time
+- Orrery now accepts `weightModifiers` prop for dynamic probability visualization
+- Astrolabe-inspired glyph UI with gold activation glow and spring animations
+- Orb color dynamically shifts between gold/purple based on modified weight threshold
+- Smooth 0.8s CSS transitions on orb size, glow, and opacity changes
+- Active alignment count readout with AnimatePresence enter/exit
+- Full keyboard accessibility (aria-pressed, aria-label on all toggles)
+- Navigation: ghost button on landing page, back button on alignment page
+
 ## [0.2.4] - 2026-02-21
 
 ### Added

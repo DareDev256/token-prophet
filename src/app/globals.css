@@ -183,6 +183,60 @@ body {
   border-radius: 50%;
 }
 
+/* ─── CELESTIAL ALIGNMENT ─── */
+
+.celestial-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.celestial-glyph {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(13, 0, 21, 0.85);
+  border: 1px solid rgba(155, 89, 182, 0.12);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-family: "Press Start 2P", monospace;
+  text-align: left;
+  color: rgba(232, 218, 239, 0.5);
+}
+
+.celestial-glyph:hover {
+  border-color: rgba(155, 89, 182, 0.3);
+  background: rgba(13, 0, 21, 0.95);
+}
+
+.celestial-glyph--active {
+  border-color: rgba(241, 196, 15, 0.4);
+  color: var(--game-secondary);
+  box-shadow: 0 0 12px rgba(241, 196, 15, 0.08), inset 0 0 20px rgba(241, 196, 15, 0.03);
+}
+
+.celestial-glyph__icon {
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+.celestial-glyph__label {
+  font-size: 7px;
+  flex: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.celestial-glyph__mod {
+  font-size: 7px;
+  opacity: 0.6;
+}
+
 /* ─── ACCESSIBILITY ─── */
 
 /* Visible focus indicators (WCAG 2.2) */

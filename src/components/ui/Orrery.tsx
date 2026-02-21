@@ -16,7 +16,7 @@ interface Orb {
   hue: "gold" | "purple";
 }
 
-const ORBS: Orb[] = [
+export const ORBS: Orb[] = [
   { radius: 18, duration: 12, offset: 0, weight: 0.92, hue: "gold" },
   { radius: 18, duration: 12, offset: 180, weight: 0.45, hue: "purple" },
   { radius: 30, duration: 20, offset: 60, weight: 0.78, hue: "gold" },
@@ -32,7 +32,12 @@ const colorMap = {
   purple: { core: "#9b59b6", glow: "rgba(155,89,182,0.4)" },
 };
 
-export function Orrery() {
+interface OrreryProps {
+  /** Per-orb weight modifiers (multiplied against base weight). Length must match ORBS. */
+  weightModifiers?: number[];
+}
+
+export function Orrery({ weightModifiers }: OrreryProps = {}) {
   return (
     <motion.div
       className="orrery-container"
@@ -58,8 +63,11 @@ export function Orrery() {
 
       {/* Orbiting probability orbs */}
       {ORBS.map((orb, i) => {
-        const size = 4 + orb.weight * 8; // 4-12px
-        const { core, glow } = colorMap[orb.hue];
+        const mod = weightModifiers?.[i] ?? 1;
+        const w = Math.max(0, Math.min(1, orb.weight * mod));
+        const size = 4 + w * 8;
+        const hue = w >= 0.5 ? "gold" : "purple";
+        const { core, glow } = colorMap[hue];
         return (
           <div
             key={i}
@@ -77,8 +85,9 @@ export function Orrery() {
                 width: `${size}px`,
                 height: `${size}px`,
                 background: core,
-                boxShadow: `0 0 ${4 + orb.weight * 12}px ${glow}, 0 0 ${8 + orb.weight * 20}px ${glow}`,
-                opacity: 0.4 + orb.weight * 0.6,
+                boxShadow: `0 0 ${4 + w * 12}px ${glow}, 0 0 ${8 + w * 20}px ${glow}`,
+                opacity: 0.4 + w * 0.6,
+                transition: "all 0.8s ease-out",
               }}
             />
           </div>

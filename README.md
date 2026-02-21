@@ -59,6 +59,10 @@ docs/
 
 Oracle/mystical aesthetic — deep purple (`#9b59b6`) and gold (`#f1c40f`) on black (`#0d0015`). Crystal ball motifs, constellation patterns, probability as divination.
 
+### Celestial Alignment
+
+The `/alignment` page lets you toggle hypothetical "celestial events" — like a star rising or a market void — and watch the Orrery's probability orbs react in real-time. Each event applies a weight modifier to specific orbs, causing them to grow, glow brighter, shift color, or fade. It's a hands-on demonstration of how external factors shift probability distributions, presented through mystical constellation glyphs.
+
 ### Algorithmic Orrery
 
 The landing page features a dynamic orrery — orbiting data-point orbs around a central prediction engine. Each orb's size, brightness, and color (gold for high probability, purple for low) represents a token's weight in the probability distribution. The animation uses pure CSS transforms for buttery 60fps performance and respects `prefers-reduced-motion`.
