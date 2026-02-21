@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.2.4] - 2026-02-21
+
+### Added
+- Claude Code compute economics research — $6/day average user cost, $3B losses, rate limit responses, and the venture-subsidized growth paradox (`docs/claude-code-compute-economics.md`)
+
 ## [0.2.3] - 2026-02-21
 
 ### Added
