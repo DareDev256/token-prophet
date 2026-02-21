@@ -2,6 +2,19 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.5.0] - 2026-02-21
+
+### Added
+- **Playable token prediction game** — full end-to-end flow: category select → predict next token → animated probability reveal → victory screen
+- Token prediction interface with oracle-themed input field — type your guess, see where you rank in the probability distribution
+- Animated probability bar chart showing top-5 token candidates with percentages, color-coded gold (high) to purple (low)
+- Scoring engine: rank-based points (10/7/5/3/1 for ranks #1-#5), zero for outside top 5
+- 10 curriculum items across 2 categories (Obvious Completions, Common Phrases) with hand-crafted probability distributions approximating real LLM behavior
+- Educational enrichment text after each prediction explaining why the distribution looks the way it does
+- Prophecy prompt UI with mystical border, scrying glyph marker, and gold-caret oracle input
+- Sound feedback: ascending chime on correct guess, soft tone on miss, celebration chord on completion
+- `TokenPrediction` and `TokenCandidate` types with `scoreGuess()` pure function
+
 ## [0.4.0] - 2026-02-21
 
 ### Added

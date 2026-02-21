@@ -59,6 +59,20 @@ docs/
 └── modern-toolbelt.md                       # Research: The Modern Toolbelt — Claude, Gemini, Lovable, Replit, Bolt, Cursor
 ```
 
+## How To Play
+
+1. Click **START GAME** → choose a category
+2. Read the partial sentence and **predict the next token** (the word the AI would choose)
+3. See the animated probability distribution — top 5 tokens with percentages
+4. Earn points based on your rank: #1 = 10pts, #2 = 7pts, #3 = 5pts, #4 = 3pts, #5 = 1pt
+5. Learn **why** the AI assigns those probabilities through enrichment insights
+
+### Categories (Phase 1)
+- **◉ Obvious Completions** — High-confidence predictions where one token dominates
+- **⟡ Common Phrases** — Idioms and expressions the model memorizes as patterns
+
+No API keys required — all probability distributions are pre-written to approximate real LLM behavior.
+
 ## Design
 
 Oracle/mystical aesthetic — deep purple (`#9b59b6`) and gold (`#f1c40f`) on black (`#0d0015`). Crystal ball motifs, constellation patterns, probability as divination.

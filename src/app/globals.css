@@ -237,6 +237,50 @@ body {
   opacity: 0.6;
 }
 
+/* ─── PROPHECY INTERFACE ─── */
+
+.prophecy-prompt {
+  background: rgba(13, 0, 21, 0.85);
+  border: 1px solid rgba(155, 89, 182, 0.2);
+  box-shadow: inset 0 0 30px rgba(155, 89, 182, 0.05), 0 0 15px rgba(155, 89, 182, 0.08);
+  position: relative;
+}
+
+.prophecy-prompt::before {
+  content: "⟐";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: var(--game-secondary);
+  filter: drop-shadow(0 0 4px var(--game-secondary));
+}
+
+.oracle-input {
+  background: rgba(13, 0, 21, 0.9);
+  border: 1px solid rgba(155, 89, 182, 0.25);
+  color: var(--game-secondary);
+  outline: none;
+  caret-color: var(--game-secondary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oracle-input:focus {
+  border-color: var(--game-secondary);
+  box-shadow: 0 0 12px rgba(241, 196, 15, 0.15), inset 0 0 20px rgba(241, 196, 15, 0.03);
+}
+
+.oracle-input::placeholder {
+  color: rgba(155, 89, 182, 0.35);
+  font-size: 8px;
+}
+
+.prophecy-insight {
+  background: rgba(13, 0, 21, 0.7);
+  border-left: 2px solid rgba(241, 196, 15, 0.3);
+}
+
 /* ─── ACCESSIBILITY ─── */
 
 /* Visible focus indicators (WCAG 2.2) */
