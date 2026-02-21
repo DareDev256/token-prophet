@@ -5,6 +5,7 @@ import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { StreakBadge } from "@/components/ui/StreakBadge";
 import { XPBar } from "@/components/ui/XPBar";
+import { Orrery } from "@/components/ui/Orrery";
 import { useProgress } from "@/hooks/useProgress";
 
 // OVERRIDE these per game
@@ -26,7 +27,9 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-8 relative">
+    <main className="min-h-screen flex flex-col items-center justify-center p-8 relative z-10">
+      <Orrery />
+
       {/* Decorative corners */}
       <div className="fixed top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-game-primary/30" />
       <div className="fixed top-4 right-16 w-8 h-8 border-t-2 border-r-2 border-game-primary/30" />

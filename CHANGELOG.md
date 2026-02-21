@@ -2,6 +2,15 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.2.0] - 2026-02-21
+
+### Added
+- Algorithmic Orrery — dynamic animated background with orbiting probability orbs
+- Central prediction engine with pulsing gold glow
+- 8 orbiting data-point orbs across 3 orbital rings, sized and colored by probability weight
+- Pure CSS orbital animations (GPU-accelerated transforms)
+- Respects `prefers-reduced-motion` via existing accessibility rules
+
 ## [0.1.1] - 2026-02-21
 
 ### Added

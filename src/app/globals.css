@@ -122,6 +122,67 @@ body {
   transition: width 0.5s ease-out;
 }
 
+/* ─── ALGORITHMIC ORRERY ─── */
+
+@keyframes orrery-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orrery-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.15); }
+}
+
+.orrery-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orrery-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--game-secondary);
+  box-shadow:
+    0 0 8px rgba(241, 196, 15, 0.8),
+    0 0 24px rgba(241, 196, 15, 0.4),
+    0 0 60px rgba(155, 89, 182, 0.2);
+  animation: orrery-pulse 4s ease-in-out infinite;
+}
+
+.orrery-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(155, 89, 182, 0.08);
+}
+
+.orrery-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: orrery-spin linear infinite;
+}
+
+.orrery-orb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
 /* ─── ACCESSIBILITY ─── */
 
 /* Visible focus indicators (WCAG 2.2) */
