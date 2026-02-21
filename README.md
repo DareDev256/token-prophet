@@ -71,6 +71,12 @@ The `/alignment` page lets you toggle hypothetical "celestial events" — like a
 
 The landing page features a dynamic orrery — orbiting data-point orbs around a central prediction engine. Each orb's size, brightness, and color (gold for high probability, purple for low) represents a token's weight in the probability distribution. The animation uses pure CSS transforms for buttery 60fps performance and respects `prefers-reduced-motion`.
 
+## Applied Roles
+
+| Role | Company | Platform | Link |
+|------|---------|----------|------|
+| Principal Full Stack Developer – Generative AI & Autonomous Agents | Sales (Extreme Networks) | Lever | [Apply](https://jobs.lever.co/extremenetworks/32eca762-2b8c-47a9-93be-1e674430fb79) |
+
 ## License
 
 MIT

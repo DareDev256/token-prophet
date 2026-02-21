@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.3.4] - 2026-02-21
+
+### Added
+- Applied Roles section in README — tracking Principal Full Stack Developer (Generative AI & Autonomous Agents) application at Extreme Networks via Lever
+
 ## [0.3.3] - 2026-02-21
 
 ### Added
