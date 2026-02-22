@@ -57,7 +57,8 @@ docs/
 ├── anythingllm-rag-democratization.md       # Research: AnythingLLM and RAG probability shifting
 ├── new-glossary.md                          # Research: The New Glossary — LLMs, RAG, Agents, MCP
 ├── modern-toolbelt.md                       # Research: The Modern Toolbelt — Claude, Gemini, Lovable, Replit, Bolt, Cursor
-└── claude-code-compaction-bug.md            # Research: Compaction discards data still on disk — bug & fix proposal
+├── claude-code-compaction-bug.md            # Research: Compaction discards data still on disk — bug & fix proposal
+└── zero-code-mcp.md                         # Research: Zero-Code MCP — YAML-declared agent security via Teleport
 ```
 
 ## Design

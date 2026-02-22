@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.4.2] - 2026-02-22
+
+### Added
+- Zero-Code MCP research — how Teleport's YAML-declared gateway turns any CLI command into a governed MCP tool for AI agents, with deny-by-default RBAC, JIT access, and full audit logging, mapped to Token Prophet's Celestial Alignment as a policy-gating metaphor (`docs/zero-code-mcp.md`)
+
 ## [0.4.1] - 2026-02-22
 
 ### Added
