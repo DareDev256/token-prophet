@@ -2,6 +2,11 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.4.1] - 2026-02-22
+
+### Added
+- Claude Code compaction bug research — how auto-compaction irreversibly discards user data despite full transcripts persisting on disk, the indexed transcript reference fix proposal, and why this maps to Token Prophet's probability distribution pedagogy (`docs/claude-code-compaction-bug.md`)
+
 ## [0.4.0] - 2026-02-21
 
 ### Added

@@ -56,7 +56,8 @@ docs/
 ├── agentic-ai-taxonomy.md                   # Research: Three paradigms of agentic AI
 ├── anythingllm-rag-democratization.md       # Research: AnythingLLM and RAG probability shifting
 ├── new-glossary.md                          # Research: The New Glossary — LLMs, RAG, Agents, MCP
-└── modern-toolbelt.md                       # Research: The Modern Toolbelt — Claude, Gemini, Lovable, Replit, Bolt, Cursor
+├── modern-toolbelt.md                       # Research: The Modern Toolbelt — Claude, Gemini, Lovable, Replit, Bolt, Cursor
+└── claude-code-compaction-bug.md            # Research: Compaction discards data still on disk — bug & fix proposal
 ```
 
 ## Design
