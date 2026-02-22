@@ -67,6 +67,19 @@ export interface GameResults {
   totalQuestions: number;
 }
 
+// ─── Token Prophet ───
+export interface TokenProbability {
+  token: string;
+  probability: number;
+}
+
+export interface TokenProphetItem extends ContentItem {
+  probabilities: TokenProbability[];
+}
+
+// Scoring: points by probability rank
+export const RANK_POINTS = [10, 7, 5, 3, 1] as const;
+
 // ─── Mastery Gate ───
 // Kumon-style: must hit 90% accuracy on last 3 attempts to advance
 export interface MasteryCheck {

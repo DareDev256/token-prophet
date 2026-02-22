@@ -10,6 +10,24 @@ Token Prophet is a web-based game where you play as an oracle predicting the nex
 
 **Part of the [Passionate Learning](https://github.com/DareDev256) game series** — interactive games that teach real ML concepts without requiring any API keys or backend.
 
+## How To Play
+
+1. **Choose a category** — "Obvious Completions" or "Common Phrases"
+2. **See the prompt** — A partial sentence appears (e.g., "The cat sat on the ___")
+3. **Type your prediction** — What token would an LLM predict next?
+4. **See the truth** — Animated probability bars reveal the top 5 most likely tokens with percentages
+5. **Learn why** — Each round explains the ML concept behind the prediction pattern
+
+### Scoring
+| Rank | Points |
+|------|--------|
+| #1 most probable token | 10 pts |
+| #2 | 7 pts |
+| #3 | 5 pts |
+| #4 | 3 pts |
+| #5 | 1 pt |
+| Not in top 5 | 0 pts |
+
 ## Tech Stack
 
 - **Next.js 16** + **React 19** + **TypeScript** (strict mode)

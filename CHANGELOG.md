@@ -2,6 +2,18 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.5.0] - 2026-02-22
+
+### Added
+- **Token Prediction Game** — fully playable end-to-end game loop with category selection, token input, animated probability bar reveal, scoring engine, and victory screen
+- `TokenProphetItem` type extending `ContentItem` with probability distributions and `RANK_POINTS` scoring constants
+- 10 curriculum items across 2 categories (Obvious Completions, Common Phrases) with pre-written probability distributions reflecting real LLM token prediction behavior
+- Animated staggered probability bar chart — top-5 tokens revealed with cascading entrance, bar fill animations, rank indicators, and point values
+- Scoring engine: #1 token = 10pts, #2 = 7pts, #3 = 5pts, #4 = 3pts, #5 = 1pt, miss = 0pt
+- Enrichment panel on each reveal explaining the ML concept (entropy, context windows, temperature, training data frequency)
+- Sound effects integration (correct/incorrect/celebration chimes via existing Web Audio hooks)
+- Full keyboard support (Enter to submit, focus management between phases)
+
 ## [0.4.2] - 2026-02-22
 
 ### Added
