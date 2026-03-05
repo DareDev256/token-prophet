@@ -17,6 +17,7 @@ Token Prophet is a web-based game where you play as an oracle predicting the nex
 - **Framer Motion** — Animations and transitions
 - **ts-fsrs** — Spaced repetition scheduling
 - **localStorage** — SSR-safe persistence, no backend required
+- **Vitest** — Unit testing with localStorage mocks
 
 ## Getting Started
 
@@ -36,11 +37,14 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run dev` | Development server |
 | `npm run build` | Production build |
 | `npm run lint` | ESLint check |
+| `npm test` | Run test suite (Vitest) |
+| `npm run test:watch` | Watch mode tests |
 
 ## Project Structure
 
 ```
 src/
+├── __tests__/     # Vitest test suite (storage, curriculum)
 ├── app/           # Next.js App Router pages
 ├── components/    # React components
 ├── data/          # Game content (token sequences, probabilities)

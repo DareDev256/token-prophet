@@ -2,6 +2,14 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.4.3] - 2026-03-05
+
+### Added
+- Test infrastructure: Vitest with localStorage mocking and SSR-guard bypass
+- 39 unit tests for `storage.ts`: XP system, recall multipliers, level completion, streak freeze mechanics, FSRS card CRUD, mastery gates, learning analytics, and reset
+- 6 data integrity tests for `curriculum.ts`: duplicate detection, difficulty validation, helper function edge cases
+- `npm test` and `npm run test:watch` scripts
+
 ## [0.4.2] - 2026-02-22
 
 ### Added
