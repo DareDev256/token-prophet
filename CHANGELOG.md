@@ -2,6 +2,19 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.5.0] - 2026-03-06
+
+### Added
+- **Probability Weave** — interactive SVG fate-thread visualization of token prediction probabilities
+- 8 Bezier curve threads radiating from a central loom point, thickness and color (gold/purple) mapped to probability weight
+- Hover/focus any thread to "pull" it — the curve bows outward via control point inflation, spotlight dims other threads
+- Endpoint orbs scale and glow on selection, labels transition with the thread
+- Detail panel with token name, probability bar, and percentage via AnimatePresence
+- Central loom glow with dual-ring breathing animation
+- Full keyboard accessibility: each thread is focusable with aria-labels and title tooltips
+- `/weave` page with entrance animations and back navigation
+- Landing page navigation button for Probability Weave
+
 ## [0.4.3] - 2026-03-05
 
 ### Added

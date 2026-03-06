@@ -69,6 +69,10 @@ docs/
 
 Oracle/mystical aesthetic — deep purple (`#9b59b6`) and gold (`#f1c40f`) on black (`#0d0015`). Crystal ball motifs, constellation patterns, probability as divination.
 
+### Probability Weave
+
+The `/weave` page visualizes token prediction probabilities as "fate threads" — SVG Bezier curves radiating from a central loom point. Each thread's thickness and color (gold for high probability, purple for low) maps to its token's weight in the distribution. Hover or focus a thread to "pull" it — the curve bows outward and a detail panel reveals the token name and exact percentage. Threads dim when another is selected, creating a spotlight effect. Full keyboard navigation with roving focus on each thread.
+
 ### Cosmic Alignment
 
 The `/cosmic` page renders an interactive SVG constellation map. Each star represents one of the Orrery's 8 probability orbs — tap a star to see which celestial events influence it. Connection lines between stars reveal shared event bonds. Selected stars pulse with a gold glow ring, connected neighbors stay visible, and everything else dims. It's the relationship graph behind the Celestial Alignment toggles, presented as a living star chart.

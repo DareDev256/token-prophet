@@ -60,6 +60,9 @@ export default function Home() {
         <Button href="/cosmic" variant="ghost">
           ⊛ COSMIC ALIGNMENT
         </Button>
+        <Button href="/weave" variant="ghost">
+          ⊘ PROBABILITY WEAVE
+        </Button>
       </motion.div>
 
       <motion.p
