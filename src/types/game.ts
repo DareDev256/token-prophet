@@ -67,6 +67,19 @@ export interface GameResults {
   totalQuestions: number;
 }
 
+// ─── Celestial Events ───
+// Probability-shifting events used by constellation and alignment visualizations.
+
+export interface CelestialEvent {
+  id: string;
+  name: string;
+  glyph: string;
+  /** Which orb indices this event affects */
+  targets: number[];
+  /** Multiplier applied to target orb weights (>1 = boost, <1 = suppress) */
+  modifier: number;
+}
+
 // ─── Mastery Gate ───
 // Kumon-style: must hit 90% accuracy on last 3 attempts to advance
 export interface MasteryCheck {

@@ -3,19 +3,12 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ORBS } from "./Orrery";
+import { lerpColor } from "@/lib/color";
 
 /** Thread labels matching ORBS order — what each probability orb represents */
 const THREAD_LABELS = [
   "the", "is", "of", "function", "return", "async", "import", "class",
 ];
-
-/** Interpolate hex color between purple (#9b59b6) and gold (#f1c40f) based on t [0,1] */
-function lerpColor(t: number): string {
-  const r = Math.round(155 + t * (241 - 155));
-  const g = Math.round(89 + t * (196 - 89));
-  const b = Math.round(182 + t * (15 - 182));
-  return `rgb(${r},${g},${b})`;
-}
 
 /** Generate a Bézier thread path from center to outer edge */
 function threadPath(

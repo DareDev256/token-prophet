@@ -4,29 +4,16 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Orrery, ORBS } from "@/components/ui/Orrery";
 import { Button } from "@/components/ui/Button";
+import { CELESTIAL_EVENTS } from "@/data/celestialEvents";
+import type { CelestialEvent } from "@/types/game";
 
-/** A hypothetical celestial event that shifts probability orbs */
-interface CelestialEvent {
-  id: string;
-  name: string;
-  glyph: string;
-  /** Which orb indices this event affects */
-  targets: number[];
-  /** Multiplier applied to target orb weights (>1 = boost, <1 = suppress) */
-  modifier: number;
-  active: boolean;
-}
-
-const CELESTIAL_EVENTS: CelestialEvent[] = [
-  { id: "nova", name: "Code Star Rising", glyph: "✦", targets: [0, 2, 5], modifier: 1.3, active: false },
-  { id: "eclipse", name: "Security Eclipse", glyph: "◐", targets: [1, 3, 6], modifier: 0.4, active: false },
-  { id: "conjunction", name: "Agent Conjunction", glyph: "⊛", targets: [2, 4], modifier: 1.5, active: false },
-  { id: "void", name: "Market Void", glyph: "◇", targets: [5, 6, 7], modifier: 0.6, active: false },
-  { id: "flare", name: "Token Flare", glyph: "❋", targets: [0, 4, 7], modifier: 1.4, active: false },
-];
+/** Runtime event state — extends shared definition with toggle state */
+type ActiveCelestialEvent = CelestialEvent & { active: boolean };
 
 export default function AlignmentPage() {
-  const [events, setEvents] = useState(CELESTIAL_EVENTS);
+  const [events, setEvents] = useState<ActiveCelestialEvent[]>(
+    () => CELESTIAL_EVENTS.map((e) => ({ ...e, active: false }))
+  );
 
   const toggle = useCallback((id: string) => {
     setEvents((prev) => prev.map((e) => (e.id === id ? { ...e, active: !e.active } : e)));

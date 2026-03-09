@@ -47,9 +47,9 @@ src/
 ├── __tests__/     # Vitest test suite (storage, curriculum)
 ├── app/           # Next.js App Router pages
 ├── components/    # React components
-├── data/          # Game content (token sequences, probabilities)
+├── data/          # Game content (token sequences, probabilities, celestial events)
 ├── hooks/         # Custom React hooks
-├── lib/           # Utilities (storage, helpers)
+├── lib/           # Utilities (storage, color, constellation graph)
 └── types/         # TypeScript type definitions
 docs/
 ├── mcp-research.md                          # Research: MCP and the AI agent era

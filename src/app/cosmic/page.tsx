@@ -4,51 +4,15 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ORBS } from "@/components/ui/Orrery";
 import { Button } from "@/components/ui/Button";
-
-/** Star names for each orb index — thematic, not generic */
-const STAR_NAMES = [
-  "Apex Prime", "Shadow Drift", "Core Nexus", "Dim Veil",
-  "Pulse Median", "Far Beacon", "Void Whisper", "Outer Fringe",
-];
-
-/** Constellation layout positions (% of SVG viewBox) */
-const STAR_POS: [number, number][] = [
-  [50, 14], [26, 28], [72, 22], [18, 52],
-  [58, 44], [82, 56], [36, 72], [64, 80],
-];
-
-/** Events that affect each orb — derived from alignment page data */
-const EVENT_MAP: { name: string; glyph: string; targets: number[]; mod: number }[] = [
-  { name: "Code Star Rising", glyph: "✦", targets: [0, 2, 5], mod: 1.3 },
-  { name: "Security Eclipse", glyph: "◐", targets: [1, 3, 6], mod: 0.4 },
-  { name: "Agent Conjunction", glyph: "⊛", targets: [2, 4], mod: 1.5 },
-  { name: "Market Void", glyph: "◇", targets: [5, 6, 7], mod: 0.6 },
-  { name: "Token Flare", glyph: "❋", targets: [0, 4, 7], mod: 1.4 },
-];
-
-/** Compute all connection lines between orbs that share at least one event */
-function buildEdges(): { from: number; to: number; events: string[] }[] {
-  const edges: { from: number; to: number; events: string[] }[] = [];
-  for (const ev of EVENT_MAP) {
-    for (let a = 0; a < ev.targets.length; a++) {
-      for (let b = a + 1; b < ev.targets.length; b++) {
-        const existing = edges.find(
-          (e) => e.from === ev.targets[a] && e.to === ev.targets[b]
-        );
-        if (existing) existing.events.push(ev.glyph);
-        else edges.push({ from: ev.targets[a], to: ev.targets[b], events: [ev.glyph] });
-      }
-    }
-  }
-  return edges;
-}
+import { CELESTIAL_EVENTS } from "@/data/celestialEvents";
+import { STAR_NAMES, STAR_POS, buildEdges } from "@/lib/constellation";
 
 export default function CosmicPage() {
   const [selected, setSelected] = useState<number | null>(null);
-  const edges = useMemo(() => buildEdges(), []);
+  const edges = useMemo(() => buildEdges(CELESTIAL_EVENTS), []);
 
   const affectingEvents = selected !== null
-    ? EVENT_MAP.filter((ev) => ev.targets.includes(selected))
+    ? CELESTIAL_EVENTS.filter((ev) => ev.targets.includes(selected))
     : [];
 
   const connectedStars = selected !== null
@@ -176,13 +140,13 @@ export default function CosmicPage() {
                     style={{
                       background: "rgba(13,0,21,0.85)",
                       border: "1px solid rgba(241,196,15,0.15)",
-                      color: ev.mod > 1 ? "#f1c40f" : "#9b59b6",
+                      color: ev.modifier > 1 ? "#f1c40f" : "#9b59b6",
                     }}
                   >
                     <span style={{ filter: "drop-shadow(0 0 4px currentColor)", width: 16, textAlign: "center" }}>{ev.glyph}</span>
                     <span className="flex-1 uppercase tracking-wider">{ev.name}</span>
                     <span style={{ opacity: 0.6 }}>
-                      {ev.mod > 1 ? `+${Math.round((ev.mod - 1) * 100)}%` : `−${Math.round((1 - ev.mod) * 100)}%`}
+                      {ev.modifier > 1 ? `+${Math.round((ev.modifier - 1) * 100)}%` : `−${Math.round((1 - ev.modifier) * 100)}%`}
                     </span>
                   </div>
                 ))}

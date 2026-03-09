@@ -2,6 +2,15 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.6.0] - 2026-03-09
+
+### Changed
+- **Celestial event deduplication** — extracted shared event data from cosmic and alignment pages into `src/data/celestialEvents.ts` (single source of truth)
+- **CelestialEvent type centralized** — moved interface to `src/types/game.ts`, alignment page derives `ActiveCelestialEvent` via intersection type
+- **Color utility extracted** — `lerpColor()` moved from ProbabilityWeave component to `src/lib/color.ts` for reuse across probability visualizations
+- **Constellation graph logic extracted** — `buildEdges()`, `STAR_NAMES`, `STAR_POS` moved to `src/lib/constellation.ts` with typed `ConstellationEdge` interface
+- Cosmic page reduced from 209 to 170 lines, alignment page from 125 to 105 lines
+
 ## [0.5.0] - 2026-03-06
 
 ### Added
