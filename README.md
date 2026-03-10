@@ -17,7 +17,7 @@ Token Prophet is a web-based game where you play as an oracle predicting the nex
 - **Framer Motion** — Animations and transitions
 - **ts-fsrs** — Spaced repetition scheduling
 - **localStorage** — SSR-safe persistence, no backend required
-- **Vitest** — Unit testing with localStorage mocks
+- **Vitest** — Unit testing with localStorage mocks (45 tests)
 
 ## Getting Started
 

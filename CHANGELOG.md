@@ -2,6 +2,13 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.6.1] - 2026-03-10
+
+### Fixed
+- **Timer division by zero** — guard against `duration=0` producing `Infinity%` CSS width (silent visual corruption)
+- **lerpColor out-of-bounds** — clamp `t` to `[0,1]` before interpolation to prevent invalid RGB values when callers pass unclamped weights
+- **Dead code removal** — removed unused `STREAK_FREEZE_KEY` constant that triggered ESLint warning (streak freezes are tracked in `UserProgress`, not a separate storage key)
+
 ## [0.6.0] - 2026-03-09
 
 ### Changed
