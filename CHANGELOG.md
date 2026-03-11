@@ -2,6 +2,18 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.7.0] - 2026-03-10
+
+### Added
+- **Oracle Prophecy system** — grade-specific mystical messages ("The tokens bow before your sight") displayed as golden italic text after grade reveal, 3 unique prophecies per grade tier (18 total)
+- **Celestial particle burst** — golden angle–distributed star glyphs (✦✧⊹✶⋆◇) explode outward from grade center on reveal, count scales with performance (18 for S/A, 10 for B, 5 for lower)
+- **Aura ring** — glowing circular halo around the grade letter with grade-specific color (gold for S, purple for A, lavender for B, red for D/F), spring entrance animation with rotation
+- **ARIA live region** — VictoryScreen now announces grade, accuracy, and score to screen readers via `role="status"`
+
+### Changed
+- VictoryScreen stat rows refactored from 4 duplicated `motion.div` blocks to a mapped array pattern (DRYer, easier to extend)
+- Star particle positions use golden angle spiral (137.508°) for deterministic even distribution without `Math.random()`
+
 ## [0.6.1] - 2026-03-10
 
 ### Fixed

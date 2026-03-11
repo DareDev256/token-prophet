@@ -81,6 +81,10 @@ The `/cosmic` page renders an interactive SVG constellation map. Each star repre
 
 The `/alignment` page lets you toggle hypothetical "celestial events" — like a star rising or a market void — and watch the Orrery's probability orbs react in real-time. Each event applies a weight modifier to specific orbs, causing them to grow, glow brighter, shift color, or fade. It's a hands-on demonstration of how external factors shift probability distributions, presented through mystical constellation glyphs.
 
+### Victory Screen
+
+The grade reveal screen transforms results into a celestial event. Your letter grade appears inside a glowing aura ring — gold for S-rank, purple for A, lavender for B — with star particles bursting outward in a golden-angle spiral. An oracle prophecy delivers grade-specific mystical flavor text ("The tokens bow before your sight" for S-rank, escalating sass for lower grades). Stats cascade in with staggered animations. Screen reader users get a full summary via ARIA live region.
+
 ### Algorithmic Orrery
 
 The landing page features a dynamic orrery — orbiting data-point orbs around a central prediction engine. Each orb's size, brightness, and color (gold for high probability, purple for low) represents a token's weight in the probability distribution. The animation uses pure CSS transforms for buttery 60fps performance and respects `prefers-reduced-motion`.
