@@ -17,7 +17,7 @@ Token Prophet is a web-based game where you play as an oracle predicting the nex
 - **Framer Motion** — Animations and transitions
 - **ts-fsrs** — Spaced repetition scheduling
 - **localStorage** — SSR-safe persistence, no backend required
-- **Vitest** — Unit testing with localStorage mocks (45 tests)
+- **Vitest** — Unit testing with localStorage mocks (58 tests)
 
 ## Getting Started
 
@@ -49,7 +49,7 @@ src/
 ├── components/    # React components
 ├── data/          # Game content (token sequences, probabilities, celestial events)
 ├── hooks/         # Custom React hooks
-├── lib/           # Utilities (storage, color, constellation graph)
+├── lib/           # Utilities (storage, color, constellation graph, diversity pipeline)
 └── types/         # TypeScript type definitions
 docs/
 ├── mcp-research.md                          # Research: MCP and the AI agent era
@@ -84,6 +84,14 @@ The `/alignment` page lets you toggle hypothetical "celestial events" — like a
 ### Victory Screen
 
 The grade reveal screen transforms results into a celestial event. Your letter grade appears inside a glowing aura ring — gold for S-rank, purple for A, lavender for B — with star particles bursting outward in a golden-angle spiral. An oracle prophecy delivers grade-specific mystical flavor text ("The tokens bow before your sight" for S-rank, escalating sass for lower grades). Stats cascade in with staggered animations. Screen reader users get a full summary via ARIA live region.
+
+### Diversity Pipeline
+
+The `src/lib/diversity.ts` module precomputes pairwise Jaccard similarity between all curriculum items into a flat `Float64Array` matrix — O(N²) once at init, O(1) lookups during gameplay. Items are featurized by category, difficulty, and prompt word stems. `findSeedIndex` identifies the most unique starting point, `diversifyResults` uses greedy farthest-first traversal to pick maximally varied subsets, and `diversityProfile` scores any set's variety from 0 (identical) to 1 (maximally diverse). Zero React dependency — pure functions over typed arrays.
+
+### Combo Meter
+
+The `ComboMeter` component renders a retro arcade streak counter with five escalating visual tiers: ×1 (purple), ×2 (bright purple), ×3 (gold), PROPHET (flame), and ORACLE (white-hot). Features include spring-animated number transitions, screen shake on combos ≥3, CRT scan line overlays at ×3+, and burst particles on tier transitions. Styled with the oracle/mystical color palette — gold and purple on black.
 
 ### Algorithmic Orrery
 

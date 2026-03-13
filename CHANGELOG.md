@@ -2,6 +2,16 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.8.0] - 2026-03-13
+
+### Added
+- **Diversity pipeline** (`src/lib/diversity.ts`) — precomputes pairwise Jaccard similarity in a flat `Float64Array` matrix for O(1) lookups during gameplay; `findSeedIndex` picks the most unique starting item, `diversifyResults` uses greedy farthest-first traversal to select maximally diverse subsets, `diversityProfile` scores any item set's variety
+- **Combo Meter** (`src/components/game/ComboMeter.tsx`) — retro arcade combo counter with 5 visual tiers (×1 → ×2 → ×3 → PROPHET → ORACLE), spring-animated numbers, screen shake on high combos, CRT scan line overlay, and burst particles on tier transitions; oracle/mystical aesthetic with gold and purple on black
+- 13 new Vitest tests for diversity pipeline covering matrix symmetry, similarity ordering, seed selection, greedy diversification, and profile scoring (58 total tests, all passing)
+
+### Changed
+- Diversity computation is fully decoupled from rendering — pure functions over typed arrays with zero React dependency, ready for integration with the game loop's item selection
+
 ## [0.7.0] - 2026-03-10
 
 ### Added
