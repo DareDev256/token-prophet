@@ -220,6 +220,12 @@ describe("FSRS card storage", () => {
     for (let i = 0; i < 10; i++) saveFSRSCard(makeCard(`item-${i}`, Date.now() - i * 1000));
     expect(getDueItems(3)).toHaveLength(3);
   });
+
+  it("returns empty array when FSRS storage is corrupted", () => {
+    store["token_prophet_fsrs_cards"] = "not-valid-json{{";
+    expect(getFSRSCards()).toEqual([]);
+    expect(getDueItems()).toEqual([]);
+  });
 });
 
 // ── Review Queue Fallback ──────────────────────
@@ -329,6 +335,35 @@ describe("learning analytics", () => {
     }
     const stored = JSON.parse(store["token_prophet_analytics"]);
     expect(stored.length).toBe(1000);
+  });
+
+  it("returns 0 retention when no review events exist", () => {
+    recordLearningEvent({ type: "first_correct", itemId: "a", timestamp: Date.now() });
+    const analytics = getLearningAnalytics();
+    expect(analytics.retentionRate7Day).toBe(0);
+    expect(analytics.retentionRate30Day).toBe(0);
+  });
+
+  it("excludes reviews with daysSinceLastSeen < 7 from 7-day retention", () => {
+    recordLearningEvent({ type: "review_correct", itemId: "a", timestamp: Date.now(), daysSinceLastSeen: 3 });
+    recordLearningEvent({ type: "review_correct", itemId: "b", timestamp: Date.now(), daysSinceLastSeen: 8 });
+    const analytics = getLearningAnalytics();
+    // Only 1 review qualifies (8 days), and it's correct → 100%
+    expect(analytics.retentionRate7Day).toBe(100);
+  });
+
+  it("counts mastered items correctly", () => {
+    recordLearningEvent({ type: "concept_mastered", itemId: "a", timestamp: Date.now() });
+    recordLearningEvent({ type: "concept_mastered", itemId: "b", timestamp: Date.now() });
+    recordLearningEvent({ type: "first_correct", itemId: "c", timestamp: Date.now() });
+    expect(getLearningAnalytics().itemsMastered).toBe(2);
+  });
+
+  it("survives corrupted analytics JSON gracefully", () => {
+    store["token_prophet_analytics"] = "broken{{{";
+    const analytics = getLearningAnalytics();
+    expect(analytics.totalItemsSeen).toBe(0);
+    expect(analytics.retentionRate7Day).toBe(0);
   });
 });
 

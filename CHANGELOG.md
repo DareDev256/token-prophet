@@ -2,6 +2,13 @@
 
 All notable changes to Token Prophet will be documented in this file.
 
+## [0.8.1] - 2026-03-14
+
+### Added
+- **Color utility tests** — 6 tests for `lerpColor` covering boundary values (t=0 purple, t=1 gold), midpoint interpolation, clamping for out-of-range inputs, and NaN behavior documentation
+- **Constellation graph tests** — 7 tests for `buildEdges` covering empty input, single-target events (no edges), multi-target pair generation, glyph aggregation on shared edges, integration test against real `CELESTIAL_EVENTS` data, and `STAR_NAMES`/`STAR_POS` data integrity
+- **Analytics edge cases** — 5 new storage tests: zero-retention when no reviews exist, exclusion of sub-7-day reviews from retention rate, mastered item counting, corrupted analytics JSON recovery, and corrupted FSRS JSON recovery
+
 ## [0.8.0] - 2026-03-13
 
 ### Added
